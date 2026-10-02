@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracie BJJ Academy</title>
+    <!-- 1. Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. Custom CSS (after Bootstrap) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (Bootstrap Component) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="#">BJJ ACADEMY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Bootstrap Grid) -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold text-uppercase">Master The Gentle Art</h1>
+            <p class="lead">Brazilian Jiu-Jitsu for self-defense, fitness, and competition.</p>
+            <a href="#prices" class="btn btn-warning btn-lg fw-bold mt-3">Start Free Trial</a>
+        </div>
+    </header>
+
+    <!-- TASK 2: ABOUT SECTION (Two columns stack on mobile with order) -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <!-- Text appears first on mobile -->
+                <div class="col-12 col-md-6 order-1 order-md-1">
+                    <h2 class="fw-bold mb-3">Why Train Jiu-Jitsu?</h2>
+                    <p>Brazilian Jiu-Jitsu (BJJ) is a martial art and combat sport based on ground fighting and submission holds. It focuses on the skill of taking an opponent to the ground, controlling one's opponent, and using techniques to force them to submit.</p>
+                    <p>It enables a smaller, weaker person to successfully defend themself against a bigger, stronger opponent using leverage and technique.</p>
+                </div>
+                <!-- Image appears second on mobile -->
+                <div class="col-12 col-md-6 order-2 order-md-2">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="BJJ Training">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TASK 2: UTILITY CLASS (Hidden on mobile phones, visible on tablets/desktops) -->
+    <div class="bg-warning text-dark text-center py-2 fw-bold d-none d-md-block">
+        🔥 Special Offer: Get a free Gi uniform when you sign up for an annual membership!
+    </div>
+
+    <!-- TASK 2: PROGRAMS SECTION (Bootstrap Cards Grid) -->
+    <section id="programs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Our Programs</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Beginners Fundamentals</h5>
+                            <p class="card-text">Learn basic positions, escapes, and fundamental submissions in a safe environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Advanced & Sparring</h5>
+                            <p class="card-text">Complex combinations, takedowns, and live sparring (rolling) for experienced belts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Kids BJJ</h5>
+                            <p class="card-text">Build confidence, discipline, and physical agility for children aged 6 to 14.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TASK 1: PRICES SECTION (Pure Custom CSS Media Queries, NO Bootstrap Grid) -->
+    <section id="prices" class="custom-pricing-section">
+        <div class="custom-container">
+            <h2 class="custom-title">Membership Plans</h2>
+            <p class="custom-subtitle">Choose the plan that fits your training goals.</p>
+
+            <div class="custom-grid">
+                <div class="custom-card">
+                    <h3>Basic</h3>
+                    <div class="price">$60 <span>/ month</span></div>
+                    <ul>
+                        <li>2 classes per week</li>
+                        <li>Access to fundamentals</li>
+                        <li>Locker room access</li>
+                    </ul>
+                    <button class="custom-btn">Select Plan</button>
+                </div>
+
+                <div class="custom-card featured">
+                    <h3>Unlimited</h3>
+                    <div class="price">$100 <span>/ month</span></div>
+                    <ul>
+                        <li>Unlimited classes</li>
+                        <li>All programs included</li>
+                        <li>Open mat access</li>
+                    </ul>
+                    <button class="custom-btn">Select Plan</button>
+                </div>
+
+                <div class="custom-card">
+                    <h3>Private Coaching</h3>
+                    <div class="price">$180 <span>/ month</span></div>
+                    <ul>
+                        <li>Unlimited group classes</li>
+                        <li>2 private sessions / mo</li>
+                        <li>Personalized video analysis</li>
+                    </ul>
+                    <button class="custom-btn">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TASK 2: FAQ SECTION (Bootstrap Accordion Component) -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="bjjAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Do I need prior martial arts experience?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#bjjAccordion">
+                        <div class="accordion-body">
+                            No! Our beginners program is specifically designed for complete novices.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            What should I wear for my first class?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#bjjAccordion">
+                        <div class="accordion-body">
+                            Wear comfortable athletic clothing like a t-shirt and shorts/spats without zippers or metal buttons.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="m-0">&copy; 2026 Gracie BJJ Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle (Required for Navbar & Accordion) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

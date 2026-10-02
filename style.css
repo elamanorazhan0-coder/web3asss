@@ -1,0 +1,122 @@
+/* 
+   TASK 1: CUSTOM MEDIA QUERIES (Mobile-First)
+   Only applied to section #prices*/
+
+.custom-pricing-section {
+    padding: 40px 15px;
+    background-color: #f8f9fa;
+}
+
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Mobile-first base styles (375px default) */
+.custom-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 5px;
+}
+
+.custom-subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/* Flexbox/Grid for 1 column on phone */
+.custom-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.custom-card {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.custom-card.featured {
+    border: 2px solid #ffc107;
+}
+
+.custom-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.custom-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.custom-card .price span {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: normal;
+}
+
+.custom-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.custom-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 0.9rem;
+}
+
+.custom-btn {
+    background-color: #212529;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* BREAKPOINT 1: Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    .custom-title {
+        font-size: 2.25rem; /* Layout & typography change */
+    }
+
+    .custom-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+
+    .custom-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 25px;
+    }
+}
+
+/* BREAKPOINT 2: Laptop/Desktop (min-width: 1280px) */
+@media (min-width: 1280px) {
+    .custom-pricing-section {
+        padding: 80px 15px;
+    }
+
+    .custom-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 30px;
+    }
+
+    .custom-card {
+        padding: 30px;
+    }
+}
